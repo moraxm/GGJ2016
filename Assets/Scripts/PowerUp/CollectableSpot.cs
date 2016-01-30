@@ -1,33 +1,33 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PowerUpSpot : MonoBehaviour
+public class CollectableSpot : MonoBehaviour
 {
-    public PowerUp[] powerUps;
+	public Collectable[] collectables;
     public float timeToSpawnPowerUp = 5;
     public bool isFull
     {
-        get { return m_powerUpToDrop != null; }
+        get { return m_currentCollectable != null; }
     }
 
     float m_acumTime;
-    PowerUp m_powerUpToDrop;
+	Collectable m_currentCollectable;
     System.Random m_rnd;
 
     void Start()
     {
         m_rnd = new System.Random();
-        CreatePowerUpInSpot();
+        CreateCollectableInSpot();
     }
 
-    void CreatePowerUpInSpot()
+    void CreateCollectableInSpot()
     {
 
-        int indexPowerUp = m_rnd.Next(0, powerUps.Length); // creates a number between 0 and powerups.Length
+        int indexPowerUp = m_rnd.Next(0, collectables.Length); // creates a number between 0 and powerups.Length
         // Instantiate the prefab of the power up with the values in the inspector
-        GameObject pu = (GameObject)Instantiate(powerUps[indexPowerUp].gameObject, transform.position, Quaternion.identity);
-        pu.name = "PowerUp";
-        m_powerUpToDrop = pu.GetComponent<PowerUp>();
+        GameObject pu = (GameObject)Instantiate(collectables[indexPowerUp].gameObject, transform.position, Quaternion.identity);
+        pu.name = "Collectable";
+		m_currentCollectable = pu.GetComponent<Collectable>();
         m_acumTime = 0;
     }
 
@@ -38,7 +38,7 @@ public class PowerUpSpot : MonoBehaviour
             m_acumTime += Time.deltaTime;
             if (m_acumTime > timeToSpawnPowerUp)
             {
-                CreatePowerUpInSpot();
+                CreateCollectableInSpot();
                 m_acumTime = 0;
             }
         }
@@ -50,15 +50,15 @@ public class PowerUpSpot : MonoBehaviour
         if (!isFull) return;
 
         // Check for PowerUpOwner component 
-        PowerUpOwner owner = other.GetComponent<PowerUpOwner>();
+		CollectableOwner owner = other.GetComponent<CollectableOwner>();
         if (owner == null) return;
 
-        owner.SetPowerUp(m_powerUpToDrop);
+		owner.SetCollectable(m_currentCollectable);
 
 
         // Set the player as the parent of the power up 
-        m_powerUpToDrop.transform.parent = other.transform;
-        m_powerUpToDrop = null;
+        m_currentCollectable.transform.parent = other.transform;
+        m_currentCollectable = null;
         
     }
 
