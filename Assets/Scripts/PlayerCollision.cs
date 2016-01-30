@@ -20,6 +20,7 @@ public class PlayerCollision : MonoBehaviour
     public void Start()
     {
         m_rigidBody = GetComponent<Rigidbody>();
+
     }
 
 
@@ -30,7 +31,10 @@ public class PlayerCollision : MonoBehaviour
 		
         if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
-			Instantiate(collisionEffect, transform.position, Quaternion.identity);
+			
+			GameObject go = (GameObject)Instantiate(collisionEffect, transform.position, Quaternion.identity);
+			Destroy(go, 3.0f);
+
 			PlayerCollision rb = collision.collider.GetComponent<PlayerCollision>();
             if (rb)
             {
