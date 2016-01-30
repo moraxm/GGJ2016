@@ -116,7 +116,9 @@ public class RuneSpot : MonoBehaviour {
 		CollectableOwner owner = other.GetComponent<CollectableOwner>();
 		if (owner == null || m_currentCollectable == null) return;
 
-		owner.SetCollectable(m_currentCollectable);
+		//owner.SetCollectable(m_currentCollectable);
+		//Do not set collectable because we do not need to destroy/finish the collectable
+		m_currentCollectable.StartCollectable(owner);
 
 		m_currentCollectable = null;
 
