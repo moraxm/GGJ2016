@@ -7363,10 +7363,6 @@ Prefab:
       propertyPath: runesUi
       value: 
       objectReference: {fileID: 1113558979}
-    - target: {fileID: 189550, guid: cf15e49ddfc9edc40b41ea37595cfb48, type: 2}
-      propertyPath: m_TagString
-      value: PlayerDefense
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf15e49ddfc9edc40b41ea37595cfb48, type: 2}
   m_IsPrefabParent: 0
