@@ -45,12 +45,6 @@ public class PlayerCollision : MonoBehaviour
 				   
             }
 
-			InventaryRune inventary = collision.collider.GetComponent<InventaryRune> ();
-			if (inventary != null) {
-				inventary.DropRune ();
-			}
-
-
         }
     }
 
