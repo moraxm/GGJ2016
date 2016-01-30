@@ -91,7 +91,7 @@ GameObject:
   - 114: {fileID: 11431654}
   - 114: {fileID: 11426610}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -574,6 +574,7 @@ MonoBehaviour:
   numRunes: 0
   nextRune: 0
   runesFilled: 0
+  previousRune: 0
   spriteRuneWithoutFill: {fileID: 21300000, guid: fa2500368bdf24002b7833eeaa610e9b,
     type: 3}
   spriteRuneFilled: {fileID: 21300000, guid: ccba2a57482734b71859595f0e0c438a, type: 3}
@@ -595,6 +596,7 @@ MonoBehaviour:
   numRunes: 0
   nextRune: 0
   runesFilled: 0
+  previousRune: 0
   spriteRuneWithoutFill: {fileID: 21300000, guid: fa2500368bdf24002b7833eeaa610e9b,
     type: 3}
   spriteRuneFilled: {fileID: 21300000, guid: ccba2a57482734b71859595f0e0c438a, type: 3}

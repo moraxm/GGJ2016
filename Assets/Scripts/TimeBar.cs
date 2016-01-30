@@ -21,5 +21,9 @@ public class TimeBar : MonoBehaviour {
 
 		time -= Time.deltaTime;
 		slider.value = time / maxTime;
+
+		if (time <= 0) {
+			UnityEngine.SceneManagement.SceneManager.LoadScene (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
+		}
 	}
 }
