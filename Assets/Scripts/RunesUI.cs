@@ -17,6 +17,10 @@ public class RunesUI : MonoBehaviour {
 	public bool nextRune;
 	public int runesFilled;
 
+	// Sprites
+	public Sprite spriteRuneWithoutFill;
+	public Sprite spriteRuneFilled;
+
 
 	// Use this for initialization
 	void Start () {
@@ -40,6 +44,9 @@ public class RunesUI : MonoBehaviour {
 			Vector3 position;
 			// Move all the runes to the left separation/2 units
 			for (int i = 0; i < numRunes; ++i) {
+				//Modify sprite
+				runes [i].GetComponent<Image> ().sprite = spriteRuneWithoutFill;
+				// Modify position
 				position = runes [i].transform.position;
 				position.x -= separation / 2;
 				runes [i].transform.position = position;
@@ -51,12 +58,14 @@ public class RunesUI : MonoBehaviour {
 			rune.transform.parent = this.gameObject.transform;
 			nextLevel = false;
 			runes [numRunes] = rune;
-
 			numRunes++;
+
+			// set again the runes sprite settings
+			runesFilled = 0;
 		}
 
 		if (nextRune) {
-			runes [runesFilled].GetComponent<Image> ().color = new Color (0, 0, 1);
+			runes [runesFilled].GetComponent<Image> ().sprite = spriteRuneFilled;
 			nextRune = false;
 			runesFilled++;
 		}
