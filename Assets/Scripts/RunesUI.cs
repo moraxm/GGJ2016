@@ -48,34 +48,45 @@ public class RunesUI : MonoBehaviour {
 			for (int i = 0; i < numRunes; ++i) {
 				//Modify sprite
 				runes [i].GetComponent<Image> ().sprite = spriteRuneWithoutFill;
-				// Modify position
-				position = runes [i].transform.position;
-				position.x -= separation / 2;
-				runes [i].transform.position = position;
+
+				if (numRunes < maxRunes) {
+					// Modify position
+					position = runes [i].transform.position;
+					position.x -= separation / 2;
+					runes [i].transform.position = position;
+				}
 			}
-			position = runes [numRunes - 1].transform.position;
-			position.x += separation;
 
-			GameObject rune = (GameObject)Instantiate(Rune, position, Quaternion.identity);
-			rune.transform.parent = this.gameObject.transform;
-			nextLevel = false;
-			runes [numRunes] = rune;
-			numRunes++;
+			if (numRunes < maxRunes) {
+				position = runes [numRunes - 1].transform.position;
+				position.x += separation;
 
+				GameObject rune = (GameObject)Instantiate(Rune, position, Quaternion.identity);
+				rune.transform.parent = this.gameObject.transform;
+				runes [numRunes] = rune;
+				numRunes++;
+			}
+				
 			// set again the runes sprite settings
 			runesFilled = 0;
+
+			nextLevel = false;
 		}
 
 		if (nextRune) {
-			runes [runesFilled].GetComponent<Image> ().sprite = spriteRuneFilled;
+			if (runesFilled < numRunes) {
+				runes [runesFilled].GetComponent<Image> ().sprite = spriteRuneFilled;
+				runesFilled++;
+			}
 			nextRune = false;
-			runesFilled++;
 		}
 
 		if (previousRune) {
-			runesFilled--;
+			if (runesFilled > 0) {
+				runesFilled--;
+				runes [runesFilled].GetComponent<Image> ().sprite = spriteRuneWithoutFill;
+			}
 			previousRune = false;
-			runes [runesFilled].GetComponent<Image> ().sprite = spriteRuneWithoutFill;
 		}
 	}
 }
