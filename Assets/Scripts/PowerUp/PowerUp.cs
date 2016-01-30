@@ -1,40 +1,44 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public abstract class PowerUp : MonoBehaviour
+public abstract class PowerUp : Collectable
 {
-    // Inspector values
-    public float timeAlive = 3;
+	// Inspector values
+	public float timeAlive = 3;
 
-    // Owner of this power up
-    private PowerUpOwner m_owner;
-    protected PowerUpOwner owner
-    {
-        get { return m_owner; }
-    }
-       
-    private float m_acumTime;
+	protected float m_acumTime;
 
-    public virtual void StartPowerUp(PowerUpOwner owner)
-    {
-        m_acumTime = 0;
-        m_owner = owner;
-    }
+	public override void StartCollectable (CollectableOwner owner)
+	{
+		base.StartCollectable (owner);
+		m_acumTime = 0;
+	}
 
-    public virtual void FinishPowerUp()
-    {
-    }
+	public override void UpdateCollectable ()
+	{
+		base.UpdateCollectable ();
+		IncrementTime ();
+	}
 
-    public virtual void UpdatePowerUp()
-    {
-        m_acumTime += Time.deltaTime;
-        if (m_acumTime > timeAlive)
-            Destroy(this);
-    }
+	void Update()
+	{
+		if (owner == null) {
+			IncrementTime ();
+		}
+	}
 
-    void OnDestroy()
-    {
-        FinishPowerUp();
-    }
+	void IncrementTime()
+	{
+		m_acumTime += Time.deltaTime;
+		if (m_acumTime > timeAlive)
+			FinishCollectable();
+	}
+
+	public override void FinishCollectable ()
+	{
+		base.FinishCollectable ();
+		Destroy (this.gameObject);
+	}
+
 
 }

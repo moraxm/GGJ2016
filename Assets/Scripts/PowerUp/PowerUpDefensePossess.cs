@@ -3,15 +3,15 @@ using System.Collections;
 
 public class PowerUpDefensePossess : PowerUp {
 
-	public override void StartPowerUp(PowerUpOwner owner)
+	public override void StartCollectable(CollectableOwner owner)
 	{
-		base.StartPowerUp(owner);
+		base.StartCollectable(owner);
 		owner.playerController.gameObject.AddComponent<BoxCollider>();
 	}
 
-	public override void FinishPowerUp()
+	public override void FinishCollectable()
 	{
-		base.FinishPowerUp();
+		base.FinishCollectable();
 
 	}
 }
