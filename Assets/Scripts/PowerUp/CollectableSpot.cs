@@ -58,9 +58,6 @@ public class CollectableSpot : MonoBehaviour
 
 		owner.SetCollectable(m_currentCollectable);
 
-
-        // Set the player as the parent of the power up 
-        m_currentCollectable.transform.parent = other.transform;
         m_currentCollectable = null;
         
     }

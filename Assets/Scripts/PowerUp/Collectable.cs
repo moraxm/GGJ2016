@@ -9,7 +9,7 @@ public abstract class Collectable : MonoBehaviour {
 	public CollectableOwner owner
 	{
 		get { return m_owner; }
-		set { owner = value; }
+		set { m_owner = value; }
 	}
 
 	public virtual void StartCollectable(CollectableOwner owner)

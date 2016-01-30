@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour {
 			v = Input.GetAxis ("VerticalArrows");
 		}
 
-        Vector3 finalForce = new Vector3(h * speed * Time.deltaTime, m_rigidBody.velocity.y, v * speed * Time.deltaTime);
+		Vector3 finalForce = new Vector3(h * speed * Time.deltaTime, Physics.gravity.y*m_rigidBody.mass, v * speed * Time.deltaTime);
 
         /*
         float acc = (m_rigidBody.velocity.magnitude - m_oldSpeed.magnitude) / Time.deltaTime;

@@ -26,6 +26,7 @@ public class PlayerCollision : MonoBehaviour
     {
 		if (onCollisionPLayer != null)
 			onCollisionPLayer (collision);
+		
         if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
 			PlayerCollision rb = collision.collider.GetComponent<PlayerCollision>();
@@ -33,7 +34,7 @@ public class PlayerCollision : MonoBehaviour
             {
                 //float explosionForce = collisionForce * m_rigidBody.velocity.magnitude;
 				// Check wich collider has more speed
-				Debug.Log ("Other speed ("+rb.name+"): "+rb.lastSpeed.magnitude+" , my speed ( "+m_rigidBody.name+"): "+lastSpeed.magnitude);
+				//Debug.Log ("Other speed ("+rb.name+"): "+rb.lastSpeed.magnitude+" , my speed ( "+m_rigidBody.name+"): "+lastSpeed.magnitude);
 				if (rb.lastSpeed.magnitude < lastSpeed.magnitude) {
 					
 					// The velocity of the other player is lower than my velocity so drop rune

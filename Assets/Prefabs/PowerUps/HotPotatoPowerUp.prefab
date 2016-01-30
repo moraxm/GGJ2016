@@ -9,7 +9,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 478494}
   - 33: {fileID: 3305976}
-  - 136: {fileID: 13666134}
   - 23: {fileID: 2390094}
   - 114: {fileID: 11463592}
   m_Layer: 0
@@ -75,20 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b291b9d5e95144989e1420d887e1d14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeAlive: 5
---- !u!136 &13666134
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 140144}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  timeAlive: 40
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -102,7 +88,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: timeAlive
-      value: 5
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
