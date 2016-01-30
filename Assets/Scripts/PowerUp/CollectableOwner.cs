@@ -6,9 +6,10 @@ public class CollectableOwner : MonoBehaviour {
 	Collectable m_currentCollectable;
 
     PlayerController m_playerController;
-    public PlayerController playerController
+	public  PlayerController playerController
     {
         get { return m_playerController; }
+		set { m_playerController = value; }
     }
 
 	public void SetCollectable(Collectable powerUp)

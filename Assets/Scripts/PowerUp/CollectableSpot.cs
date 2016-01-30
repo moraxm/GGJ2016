@@ -48,9 +48,9 @@ public class CollectableSpot : MonoBehaviour
     {
         // If this spot is empty, we decrease the runes collected.
 		if (!isFull && (other.gameObject.layer == LayerMask.NameToLayer("Player"))){
-			//Debug.Log ("OnTriggerEnter.other: " + other);
+			
 			other.gameObject.GetComponent<InventaryRune> ().DropRune();
-		}
+		};
 
         // Check for PowerUpOwner component 
 		CollectableOwner owner = other.GetComponent<CollectableOwner>();

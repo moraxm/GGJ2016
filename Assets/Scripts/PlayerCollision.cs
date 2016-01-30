@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerCollision : MonoBehaviour 
 {
     public float collisionForce = 10;
+	public delegate void onCollisionPlayerDelegate(Collision coll);
+	public event onCollisionPlayerDelegate onCollisionPLayer;
 
     Rigidbody m_rigidBody;
 	Vector3 m_lastSpeed;
@@ -21,6 +24,8 @@ public class PlayerCollision : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
+		if (onCollisionPLayer != null)
+			onCollisionPLayer (collision);
         if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
 			PlayerCollision rb = collision.collider.GetComponent<PlayerCollision>();
@@ -39,6 +44,12 @@ public class PlayerCollision : MonoBehaviour
 				}
 				   
             }
+
+			InventaryRune inventary = collision.collider.GetComponent<InventaryRune> ();
+			if (inventary != null) {
+				inventary.DropRune ();
+			}
+
 
         }
     }
