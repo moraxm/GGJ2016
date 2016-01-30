@@ -188,10 +188,6 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11426610, guid: 2bdb3b54b730b4e20b90237d51f0f2bf, type: 2}
-      propertyPath: time
-      value: 5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2bdb3b54b730b4e20b90237d51f0f2bf, type: 2}
   m_IsPrefabParent: 0
@@ -616,15 +612,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-<<<<<<< HEAD
-=======
 --- !u!114 &867722753 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11466662, guid: 2bdb3b54b730b4e20b90237d51f0f2bf,
     type: 2}
   m_PrefabInternal: {fileID: 76859793}
   m_Script: {fileID: 11500000, guid: 2a4b77792f51141158c240a3e3c480d3, type: 3}
->>>>>>> fc610560b0c401dbf37a994da100ca3252e03846
 --- !u!1001 &919894510
 Prefab:
   m_ObjectHideFlags: 0
