@@ -13,7 +13,7 @@ public class CollisionEvents : MonoBehaviour {
 			onCollisionEnter (col);
 	}
 
-	void OnCollisionExit(Collider col)
+	void OnCollisionExit(Collision col)
 	{
 		if (onCollisionExit != null)
 			onCollisionExit (col);

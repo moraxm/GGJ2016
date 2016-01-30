@@ -13,7 +13,7 @@ public class PowerUpCapsuleForce : PowerUp {
 	public override void FinishCollectable ()
 	{
 		base.FinishCollectable ();
-		eventsOfSphereForce -= CheckCollision;
+		//eventsOfSphereForce -= CheckCollision;
 	}
 
 	void CheckCollision(Collision col)
