@@ -7,6 +7,8 @@ public class PowerUpCapsuleForce : PowerUp {
 	public override void StartCollectable (CollectableOwner owner)
 	{
 		base.StartCollectable (owner);
+		transform.localPosition = Vector3.zero;
+		eventsOfSphereForce.gameObject.SetActive (true);
 		eventsOfSphereForce.onCollisionEnter += CheckCollision;
 	}
 
@@ -21,6 +23,6 @@ public class PowerUpCapsuleForce : PowerUp {
 		// Only collision with player because physics layer collision mask
 		InventaryRune  ir = col.collider.GetComponent<InventaryRune>();
 		ir.DropRune ();
-		FinishCollectable();
+		//FinishCollectable();
 	}
 }

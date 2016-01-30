@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Events;
 
 public class CollisionEvents : MonoBehaviour {
 
@@ -7,10 +8,10 @@ public class CollisionEvents : MonoBehaviour {
 	public CollisionEventDelegate onCollisionEnter;
 	public CollisionEventDelegate onCollisionExit;
 
-	void OnCollisionEnter(Collision col)
+	void OnCollisionEnter(Collision collision)
 	{
 		if (onCollisionEnter != null)
-			onCollisionEnter (col);
+			onCollisionEnter (collision);
 	}
 
 	void OnCollisionExit(Collision col)

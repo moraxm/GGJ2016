@@ -25,7 +25,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 427488}
-  - 114: {fileID: 11492966}
   m_Layer: 0
   m_Name: PowerUpHintPrefab
   m_TagString: Untagged
@@ -58,17 +57,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 427488}
   m_RootOrder: 0
---- !u!114 &11492966
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 173162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9303dbd09305c95429840e2939afd1e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!198 &19855272
 ParticleSystem:
   m_ObjectHideFlags: 1
