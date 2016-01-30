@@ -118,9 +118,6 @@ public class RuneSpot : MonoBehaviour {
 
 		owner.SetCollectable(m_currentCollectable);
 
-
-		// Set the player as the parent of the power up 
-		m_currentCollectable.transform.parent = other.transform;
 		m_currentCollectable = null;
 
 		m_acumTime = 0;

@@ -17,9 +17,10 @@ public class PowerUpHotPotato : PowerUp {
 		if (owner != null){
 			InventaryRune ir = owner.playerController.gameObject.GetComponent<InventaryRune> ();
 			ir.DropRune ();
+			owner.playerController.GetComponent<PlayerCollision> ().onCollisionPLayer -= onCollision;
 
 		}
-		owner.playerController.GetComponent<PlayerCollision> ().onCollisionPLayer -= onCollision;
+
 		base.FinishCollectable();
 
 	}
