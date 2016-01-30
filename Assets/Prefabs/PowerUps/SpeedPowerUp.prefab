@@ -74,15 +74,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb426b9dcef3c394e80251ff00aed60b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeAlive: 0
-  speedIncrement: 2
+  timeAlive: 5
+  speedIncrement: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: timeAlive
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: speedIncrement
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 113022}
