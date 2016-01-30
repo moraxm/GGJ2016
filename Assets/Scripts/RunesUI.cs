@@ -29,7 +29,7 @@ public class RunesUI : MonoBehaviour {
 		// create the Rune
 		GameObject rune = (GameObject)Instantiate(Rune, transform.position, Quaternion.identity);
 		// Assign to the parent
-		rune.transform.parent = this.gameObject.transform;
+		rune.transform.SetParent(this.gameObject.transform,false);
 		// Add to the array of runes
 		runes [numRunes] = rune;
 		// increase the num of runes
