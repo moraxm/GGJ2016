@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11456686}
   m_Layer: 0
   m_Name: PowerUpSpot
-  m_TagString: Untagged
+  m_TagString: PowerUpSpot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

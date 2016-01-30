@@ -4,13 +4,12 @@ using System.Collections;
 public abstract class Collectable : MonoBehaviour {
 
 
-
-
 	// Owner of this power up
 	private CollectableOwner m_owner;
-	protected CollectableOwner owner
+	public CollectableOwner owner
 	{
 		get { return m_owner; }
+		set { owner = value; }
 	}
 
 	public virtual void StartCollectable(CollectableOwner owner)

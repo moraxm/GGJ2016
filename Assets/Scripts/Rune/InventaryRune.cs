@@ -23,10 +23,6 @@ public class InventaryRune : MonoBehaviour
 		++m_runeCount;
 
 		if (m_runeCount >= m_currentLevel) {
-			m_runeCount = 0;
-			++m_currentLevel;
-			runesUi.nextLevel = true;
-		} else {
 			runesUi.nextRune = true;
 		}
 	}

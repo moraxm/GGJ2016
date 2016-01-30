@@ -6,6 +6,8 @@ TagManager:
   tags:
   - PlayerDefense
   - PlayerAttack
+  - PowerUpSpot
+  - RuneSpot
   layers:
   - Default
   - TransparentFX
