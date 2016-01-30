@@ -26,6 +26,10 @@ public class PlayerCollision : MonoBehaviour
                 //rb.AddForce(m_rigidBody.velocity * collisionForce, ForceMode.VelocityChange);
                 //rb.AddExplosionForce(explosionForce, transform.position, 5, 0.0f, ForceMode.Impulse);
             }
+			InventaryRune inventary = collision.collider.GetComponent<InventaryRune> ();
+			if (inventary != null) {
+				inventary.DropRune ();
+			}
         }
     }
 

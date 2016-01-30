@@ -29,4 +29,20 @@ public class InventaryRune : MonoBehaviour
 			runesUi.nextLevel = true;
 		}
 	}
+
+	public void DropRune()
+	{
+		if (m_runeCount > 0)
+		{
+			runesUi.previousRune = true;
+			--m_runeCount
+		}
+		runesUi.nextRune = true;
+		if (m_runeCount >= m_currentLevel) 
+		{
+			m_runeCount = 0;
+			++m_currentLevel;
+			runesUi.nextLevel = true;
+		}
+	}
 }
