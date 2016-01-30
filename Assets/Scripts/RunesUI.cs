@@ -16,6 +16,7 @@ public class RunesUI : MonoBehaviour {
 	// For runes
 	public bool nextRune;
 	public int runesFilled;
+	public bool previousRune;
 
 	// Sprites
 	public Sprite spriteRuneWithoutFill;
@@ -36,6 +37,7 @@ public class RunesUI : MonoBehaviour {
 		// There isn't runes filled in initation
 		runesFilled = 0;
 		nextRune = false;
+		previousRune = false;
 	}
 	
 	// Update is called once per frame
@@ -68,6 +70,12 @@ public class RunesUI : MonoBehaviour {
 			runes [runesFilled].GetComponent<Image> ().sprite = spriteRuneFilled;
 			nextRune = false;
 			runesFilled++;
+		}
+
+		if (previousRune) {
+			runesFilled--;
+			previousRune = false;
+			runes [runesFilled].GetComponent<Image> ().sprite = spriteRuneWithoutFill;
 		}
 	}
 }
