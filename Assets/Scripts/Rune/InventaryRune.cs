@@ -3,6 +3,7 @@ using System.Collections;
 
 public class InventaryRune : MonoBehaviour 
 {
+	public RunesUI runesUi;
 	int m_currentLevel;
 	int m_runeCount;
 	// Use this for initialization
@@ -20,11 +21,12 @@ public class InventaryRune : MonoBehaviour
 	public void CollectRune()
 	{
 		++m_runeCount;
-
+		runesUi.nextRune = true;
 		if (m_runeCount >= m_currentLevel) 
 		{
 			m_runeCount = 0;
 			++m_currentLevel;
+			runesUi.nextLevel = true;
 		}
 	}
 }
