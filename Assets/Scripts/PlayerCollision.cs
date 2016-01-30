@@ -8,6 +8,7 @@ public class PlayerCollision : MonoBehaviour
     public float collisionForce = 10;
 	public delegate void onCollisionPlayerDelegate(Collision coll);
 	public event onCollisionPlayerDelegate onCollisionPLayer;
+	public GameObject collisionEffect;
 
     Rigidbody m_rigidBody;
 	Vector3 m_lastSpeed;
@@ -29,6 +30,7 @@ public class PlayerCollision : MonoBehaviour
 		
         if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
+			Instantiate(collisionEffect, transform.position, Quaternion.identity);
 			PlayerCollision rb = collision.collider.GetComponent<PlayerCollision>();
             if (rb)
             {
