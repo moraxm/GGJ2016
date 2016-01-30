@@ -46,8 +46,11 @@ public class CollectableSpot : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        // If this spot is empty do nothing
-        if (!isFull) return;
+        // If this spot is empty, we decrease the runes collected.
+		if (!isFull && (other.gameObject.tag == "PlayerAttack" ||
+			other.gameObject.tag == "PlayerDefense")){
+			other.gameObject.GetComponent<InventaryRune> ();
+		};
 
         // Check for PowerUpOwner component 
 		CollectableOwner owner = other.GetComponent<CollectableOwner>();

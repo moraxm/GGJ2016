@@ -29,4 +29,5 @@ public class InventaryRune : MonoBehaviour
 			runesUi.nextLevel = true;
 		}
 	}
+
 }
