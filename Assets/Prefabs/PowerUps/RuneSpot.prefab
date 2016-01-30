@@ -77,7 +77,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectables:
   - {fileID: 11448932, guid: 2d4fcae2ebe163c4abc6cb98cff52faf, type: 2}
-  runeHintPrefab: {fileID: 412682, guid: 2d4fcae2ebe163c4abc6cb98cff52faf, type: 2}
+  runeHintPrefab: {fileID: 436388, guid: d89a6cdc2d6814b498fcaa1c155f4c99, type: 2}
   timeToSpawnHint: 1
   hintLifetime: 2
   timeToCooldown: 5

@@ -18,6 +18,9 @@ public class PowerUpCapsuleForce : PowerUp {
 
 	void CheckCollision(Collision col)
 	{
-		//col.co
+		// Only collision with player because physics layer collision mask
+		InventaryRune  ir = col.collider.GetComponent<InventaryRune>();
+		ir.DropRune ();
+		FinishCollectable();
 	}
 }
