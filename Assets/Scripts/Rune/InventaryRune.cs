@@ -21,12 +21,13 @@ public class InventaryRune : MonoBehaviour
 	public void CollectRune()
 	{
 		++m_runeCount;
-		runesUi.nextRune = true;
-		if (m_runeCount >= m_currentLevel) 
-		{
+
+		if (m_runeCount >= m_currentLevel) {
 			m_runeCount = 0;
 			++m_currentLevel;
 			runesUi.nextLevel = true;
+		} else {
+			runesUi.nextRune = true;
 		}
 	}
 

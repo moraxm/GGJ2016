@@ -510,22 +510,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 673492387}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &775658241 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 194118, guid: d94c2d6d003f1c346b0f4ceb48a38bc1, type: 2}
-  m_PrefabInternal: {fileID: 959166837}
---- !u!114 &775658242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 775658241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91b4b028a08fd3a4badc6b13a9771cb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  runesUi: {fileID: 867722753}
 --- !u!1 &859206237
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,6 +696,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11447500, guid: d94c2d6d003f1c346b0f4ceb48a38bc1, type: 2}
+      propertyPath: runesUi
+      value: 
+      objectReference: {fileID: 867722753}
     - target: {fileID: 11405088, guid: d94c2d6d003f1c346b0f4ceb48a38bc1, type: 2}
       propertyPath: scrollbar
       value: 
@@ -900,6 +888,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11469802, guid: cf15e49ddfc9edc40b41ea37595cfb48, type: 2}
+      propertyPath: runesUi
+      value: 
+      objectReference: {fileID: 1113558979}
     - target: {fileID: 11457930, guid: cf15e49ddfc9edc40b41ea37595cfb48, type: 2}
       propertyPath: scrollbar
       value: 
@@ -907,22 +899,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf15e49ddfc9edc40b41ea37595cfb48, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1811821497 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 189550, guid: cf15e49ddfc9edc40b41ea37595cfb48, type: 2}
-  m_PrefabInternal: {fileID: 1695741852}
---- !u!114 &1811821498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1811821497}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91b4b028a08fd3a4badc6b13a9771cb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  runesUi: {fileID: 1113558979}
 --- !u!114 &1888783776 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11453086, guid: 2bdb3b54b730b4e20b90237d51f0f2bf,
