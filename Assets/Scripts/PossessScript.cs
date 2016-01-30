@@ -28,7 +28,7 @@ public class PossessScript : MonoBehaviour {
 
 			if (timePossesion < 0) {
 				timePossesion = timePossessionElapsed;
-				Debug.Log (playerDefenseReference.tag + " is in possession proccess");
+				//Debug.Log (playerDefenseReference.tag + " is in possession proccess");
 				if (playerDefenseReference == null) {
 					Debug.LogError ("Not PlayerDefense reference!!");
 				}
