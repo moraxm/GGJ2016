@@ -1,14 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class RunesUI : MonoBehaviour {
 
 	public GameObject Rune;
 	public int maxRunes = 7;
+	public int separation = 30;
 
-	public bool create;
+	// For level
+	public bool nextLevel;
 	public int numRunes = 0;
 	GameObject[] runes;
+
+	// For runes
+	public bool nextRune;
+	public int runesFilled;
+
 
 	// Use this for initialization
 	void Start () {
@@ -21,27 +29,36 @@ public class RunesUI : MonoBehaviour {
 		runes [numRunes] = rune;
 		// increase the num of runes
 		numRunes++;
-
+		// There isn't runes filled in initation
+		runesFilled = 0;
+		nextRune = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (create) {
+		if (nextLevel) {
 			Vector3 position;
+			// Move all the runes to the left separation/2 units
 			for (int i = 0; i < numRunes; ++i) {
 				position = runes [i].transform.position;
-				position.x -= 15;
+				position.x -= separation / 2;
 				runes [i].transform.position = position;
 			}
 			position = runes [numRunes - 1].transform.position;
-			position.x += 30;
+			position.x += separation;
 
 			GameObject rune = (GameObject)Instantiate(Rune, position, Quaternion.identity);
 			rune.transform.parent = this.gameObject.transform;
-			create = false;
+			nextLevel = false;
 			runes [numRunes] = rune;
 
 			numRunes++;
+		}
+
+		if (nextRune) {
+			runes [runesFilled].GetComponent<Image> ().color = new Color (0, 0, 1);
+			nextRune = false;
+			runesFilled++;
 		}
 	}
 }
