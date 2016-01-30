@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11456686}
   m_Layer: 0
   m_Name: PowerUpSpot
-  m_TagString: Untagged
+  m_TagString: PowerUpSpot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,9 +75,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 979e68703ae1cd045a27d26bf44a49ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerUps:
+  collectables:
   - {fileID: 11467778, guid: c790a2d3cdac5824eabf736b0fa4c501, type: 2}
-  timeToSpawnPowerUp: 5
+  powerUpHintPrefab: {fileID: 427488, guid: fba5faefd50148041b57b3145355f8eb, type: 2}
+  timeToSpawnHint: 1
+  hintLifetime: 3
+  powerupLifetime: 10
+  timeToCooldown: 2
 --- !u!135 &13512364
 SphereCollider:
   m_ObjectHideFlags: 1
