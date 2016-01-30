@@ -10,6 +10,11 @@ public class PlayerCollision : MonoBehaviour
 	public event onCollisionPlayerDelegate onCollisionPLayer;
 
     Rigidbody m_rigidBody;
+	Vector3 m_lastSpeed;
+	public Vector3 lastSpeed 
+	{
+		get { return m_lastSpeed; }
+	}
 
     public void Start()
     {
@@ -23,18 +28,28 @@ public class PlayerCollision : MonoBehaviour
 			onCollisionPLayer (collision);
         if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
-            Rigidbody rb = collision.collider.GetComponent<Rigidbody>();
+			PlayerCollision rb = collision.collider.GetComponent<PlayerCollision>();
             if (rb)
             {
-                float explosionForce = collisionForce * m_rigidBody.velocity.magnitude;
-                
-                //rb.AddForce(m_rigidBody.velocity * collisionForce, ForceMode.VelocityChange);
-                //rb.AddExplosionForce(explosionForce, transform.position, 5, 0.0f, ForceMode.Impulse);
+                //float explosionForce = collisionForce * m_rigidBody.velocity.magnitude;
+				// Check wich collider has more speed
+				Debug.Log ("Other speed ("+rb.name+"): "+rb.lastSpeed.magnitude+" , my speed ( "+m_rigidBody.name+"): "+lastSpeed.magnitude);
+				if (rb.lastSpeed.magnitude < lastSpeed.magnitude) {
+					
+					// The velocity of the other player is lower than my velocity so drop rune
+					InventaryRune inventary = collision.collider.GetComponent<InventaryRune> ();
+					if (inventary != null) {
+						inventary.DropRune ();
+					} 
+				}
+				   
             }
+
 			InventaryRune inventary = collision.collider.GetComponent<InventaryRune> ();
 			if (inventary != null) {
 				inventary.DropRune ();
 			}
+
 
         }
     }
@@ -50,4 +65,9 @@ public class PlayerCollision : MonoBehaviour
         // Apply other rigidbody direction to us
         m_rigidBody.velocity = speed;
     }
+
+	void Update()
+	{
+		m_lastSpeed = m_rigidBody.velocity;
+	}
 }

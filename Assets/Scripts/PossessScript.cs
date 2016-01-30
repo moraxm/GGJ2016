@@ -42,7 +42,7 @@ public class PossessScript : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) {
 		if (other.tag == "PlayerDefense") {
-			Debug.Log (other.tag + " is starting of possession proccess");
+			//Debug.Log (other.tag + " is starting of possession proccess");
 			possessionProcessStarted = true;
 			playerDefenseReference = other.gameObject;
 		}
@@ -51,7 +51,7 @@ public class PossessScript : MonoBehaviour {
 
 	void OnTriggerExit(Collider other) {
 		if (other.tag == "PlayerDefense") {
-			Debug.Log (other.tag + " is exist of possession proccess");
+			//Debug.Log (other.tag + " is exist of possession proccess");
 			possessionProcessStarted = false;
 		}
 	}
