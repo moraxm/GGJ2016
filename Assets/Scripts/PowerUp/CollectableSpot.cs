@@ -49,7 +49,7 @@ public class CollectableSpot : MonoBehaviour
         // If this spot is empty, we decrease the runes collected.
 		if (!isFull && (other.gameObject.tag == "PlayerAttack" ||
 			other.gameObject.tag == "PlayerDefense")){
-			other.gameObject.GetComponent<InventaryRune> ();
+			other.gameObject.GetComponent<InventaryRune> ().DropRune();
 		};
 
         // Check for PowerUpOwner component 
