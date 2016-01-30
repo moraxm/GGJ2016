@@ -5,7 +5,7 @@ public abstract class PowerUp : Collectable
 {
 	// Inspector values
 	public float timeAlive = 3;
-
+	public GameObject particles;
 	protected float m_acumTime;
 
 	public override void StartCollectable (CollectableOwner owner)
