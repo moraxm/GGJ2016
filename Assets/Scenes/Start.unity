@@ -696,14 +696,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 11447500, guid: d94c2d6d003f1c346b0f4ceb48a38bc1, type: 2}
-      propertyPath: runesUi
-      value: 
-      objectReference: {fileID: 867722753}
     - target: {fileID: 11405088, guid: d94c2d6d003f1c346b0f4ceb48a38bc1, type: 2}
       propertyPath: scrollbar
       value: 
       objectReference: {fileID: 1888783776}
+    - target: {fileID: 11447500, guid: d94c2d6d003f1c346b0f4ceb48a38bc1, type: 2}
+      propertyPath: runesUi
+      value: 
+      objectReference: {fileID: 867722753}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d94c2d6d003f1c346b0f4ceb48a38bc1, type: 2}
   m_IsPrefabParent: 0
@@ -888,14 +888,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 11469802, guid: cf15e49ddfc9edc40b41ea37595cfb48, type: 2}
-      propertyPath: runesUi
-      value: 
-      objectReference: {fileID: 1113558979}
     - target: {fileID: 11457930, guid: cf15e49ddfc9edc40b41ea37595cfb48, type: 2}
       propertyPath: scrollbar
       value: 
       objectReference: {fileID: 297209743}
+    - target: {fileID: 11469802, guid: cf15e49ddfc9edc40b41ea37595cfb48, type: 2}
+      propertyPath: runesUi
+      value: 
+      objectReference: {fileID: 1113558979}
+    - target: {fileID: 189550, guid: cf15e49ddfc9edc40b41ea37595cfb48, type: 2}
+      propertyPath: m_TagString
+      value: PlayerDefense
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf15e49ddfc9edc40b41ea37595cfb48, type: 2}
   m_IsPrefabParent: 0
