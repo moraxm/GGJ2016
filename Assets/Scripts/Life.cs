@@ -30,7 +30,7 @@ public class Life : MonoBehaviour {
 	 * If return true the character is alive
 	 * else the character is dead.
 	 */
-	bool decreaseLife (float amountToDecrease){
+	public bool decreaseLife (float amountToDecrease){
 		life -= amountToDecrease;
 		scrollbar.size = life / maxLife;
 
