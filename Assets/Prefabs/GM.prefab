@@ -39,8 +39,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac8fa438daf59534a9d76bdb6886da5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numPowerUpSpotsActive: 1
-  numRuneSpotsActive: 1
+  numPowerUpSpotsActive: 5
+  numRuneSpotsActive: 5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
