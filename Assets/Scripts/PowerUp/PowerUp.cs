@@ -13,6 +13,7 @@ public abstract class PowerUp : Collectable
 		base.StartCollectable (owner);
 		transform.localPosition = Vector3.zero;
 		m_acumTime = 0;
+
 	}
 
 	public override void UpdateCollectable ()
