@@ -17,6 +17,8 @@ public class RunesUI : MonoBehaviour {
 	public Sprite spriteRuneWithoutFill;
 	public Sprite spriteRuneFilled;
 
+	public int sceneToLoad;
+
 
 	// Use this for initialization
 	void Start () {
@@ -35,7 +37,7 @@ public class RunesUI : MonoBehaviour {
 				runesFilled++;
 			}
 			if (runesFilled == maxRunes) {
-				UnityEngine.SceneManagement.SceneManager.LoadScene (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
+				UnityEngine.SceneManagement.SceneManager.LoadScene (sceneToLoad);
 			}
 			nextRune = false;
 		}

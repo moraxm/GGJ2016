@@ -6,6 +6,8 @@ public class TimeBar : MonoBehaviour {
 
 	// time in seconds
 	public float time = 180;
+	public RunesUI uiAtacker;
+	public RunesUI uiDefenser;
 
 	float maxTime;
 	Slider slider;
@@ -23,7 +25,16 @@ public class TimeBar : MonoBehaviour {
 		slider.value = time / maxTime;
 
 		if (time <= 0) {
-			UnityEngine.SceneManagement.SceneManager.LoadScene (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
+			if (uiAtacker.runesFilled > uiDefenser.runesFilled) {
+				UnityEngine.SceneManagement.SceneManager.LoadScene (2);
+			}
+			else if (uiAtacker.runesFilled < uiDefenser.runesFilled){
+				UnityEngine.SceneManagement.SceneManager.LoadScene (3);
+			}
+			else{
+				UnityEngine.SceneManagement.SceneManager.LoadScene (1);	
+			}
+
 		}
 	}
 }

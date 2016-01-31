@@ -25,7 +25,8 @@ public class CollectableSpot : MonoBehaviour
 
         int indexPowerUp = m_rnd.Next(0, collectables.Length); // creates a number between 0 and powerups.Length
         // Instantiate the prefab of the power up with the values in the inspector
-        GameObject pu = (GameObject)Instantiate(collectables[indexPowerUp].gameObject, transform.position, Quaternion.identity);
+		//Added (y + 1) to show the powerup symbol
+		GameObject pu = (GameObject)Instantiate(collectables[indexPowerUp].gameObject, transform.position + new Vector3(0, 1.0f, 0), Quaternion.identity);
         pu.name = "Collectable";
 		m_currentCollectable = pu.GetComponent<Collectable>();
         m_acumTime = 0;
