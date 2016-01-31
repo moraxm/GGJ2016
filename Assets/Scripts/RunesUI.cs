@@ -34,6 +34,9 @@ public class RunesUI : MonoBehaviour {
 				runes [runesFilled].GetComponent<Image> ().sprite = spriteRuneFilled;
 				runesFilled++;
 			}
+			if (runesFilled == maxRunes) {
+				UnityEngine.SceneManagement.SceneManager.LoadScene (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
+			}
 			nextRune = false;
 		}
 
