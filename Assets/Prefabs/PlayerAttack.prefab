@@ -149,9 +149,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 193292}
-  m_LocalRotation: {x: 0.024144359, y: -0.0006968958, z: 0.02884309, w: 0.9992921}
-  m_LocalPosition: {x: -0.58752215, y: 3.8762596, z: 1.5979985}
-  m_LocalScale: {x: 0.5140203, y: 0.5140203, z: 0.51402026}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 411734}
   - {fileID: 437042}
@@ -179,7 +179,7 @@ Transform:
   m_GameObject: {fileID: 194118}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000016292068}
   m_LocalPosition: {x: -6, y: 1.66, z: -10.2}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 478452}
   m_Father: {fileID: 0}
@@ -472,6 +472,7 @@ MonoBehaviour:
   timeToReachMaxSpeed: 4
   maxSpeed: 25
   attacker: 1
+  angle: 90
 --- !u!136 &13652612
 CapsuleCollider:
   m_ObjectHideFlags: 1

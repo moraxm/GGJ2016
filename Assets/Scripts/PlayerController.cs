@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour {
     public float timeToReachMaxSpeed = 2;
     public float maxSpeed = 10;
 	public bool attacker;
+	public float angle = 0;
 
 	/**
 	 * Private Atributtes
@@ -33,11 +34,13 @@ public class PlayerController : MonoBehaviour {
 		if (attacker) {
 			h = Input.GetAxis ("HorizontalWASD");
 			v = Input.GetAxis ("VerticalWASD");
+			changeDirection (h, v);
 		} else {
 			h = Input.GetAxis ("HorizontalArrows");
 			v = Input.GetAxis ("VerticalArrows");
+			changeDirection (h, v);
 		}
-		changeDirection (h, v);
+
 		Vector3 finalForce = new Vector3(h * speed * Time.deltaTime, Physics.gravity.y*m_rigidBody.mass, v * speed * Time.deltaTime);
 
         /*
@@ -71,11 +74,10 @@ public class PlayerController : MonoBehaviour {
     }
 
 	public void changeDirection(float xAxe, float yAxe){
-		//Vector2 basicVector = new Vector2 (1,0, 0);
-		//Vector2 realVector = new Vector2 (xAxe, yAxe);
-		//float angleToRotate = Vector2.Angle (basicVector, realVector.normalized);
-		Vector3 vector3 = new Vector3 (xAxe, 0, yAxe);
-		this.GetComponent<Transform> ().Rotate (vector3);
+		Vector2 basicVector = new Vector2 (1,0);
+		Vector2 realVector = new Vector2 (xAxe, yAxe);
+		float angleToRotate = Vector2.Angle (basicVector, realVector.normalized);
+		transform.rotation = Quaternion.AngleAxis(angleToRotate + angle, Vector3.up);
 	}
 		
 }
