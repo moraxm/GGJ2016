@@ -11,12 +11,16 @@ public class PowerUpSpeed : PowerUp
         base.StartCollectable(owner);
         owner.playerController.speed *= speedIncrement;
 		Debug.Log ("Speed incremented: " + speedIncrement);
+		owner.playerController.GetComponent<InventaryPowerUp> ().changeTo ("correr");
     }
 
     public override void FinishCollectable()
     {
-		if (owner != null)
+		if (owner != null) {
 			owner.playerController.speed /= speedIncrement;
+			owner.playerController.GetComponent<InventaryPowerUp> ().changeTo ("none");
+		}
+			
         base.FinishCollectable();
     }
 }

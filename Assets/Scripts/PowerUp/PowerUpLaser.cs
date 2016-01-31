@@ -10,6 +10,7 @@ public class PowerUpLaser : PowerUp {
 		base.StartCollectable(owner);
 		lineRenderer = GetComponent<LineRenderer> ();	
 		lineRenderer.enabled = true;
+		owner.playerController.GetComponent<InventaryPowerUp> ().changeTo ("laser");
 	}
 
 	public void Update(){
@@ -47,6 +48,8 @@ public class PowerUpLaser : PowerUp {
 
 	public override void FinishCollectable()
 	{	
+		if (owner)
+			owner.playerController.GetComponent<InventaryPowerUp> ().changeTo ("none");
 		lineRenderer.enabled = false;
 		base.FinishCollectable();
 	}

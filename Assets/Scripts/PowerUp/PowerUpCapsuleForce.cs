@@ -10,10 +10,13 @@ public class PowerUpCapsuleForce : PowerUp {
 		transform.localPosition = Vector3.zero;
 		eventsOfSphereForce.gameObject.SetActive (true);
 		eventsOfSphereForce.onCollisionEnter += CheckCollision;
+		owner.playerController.GetComponent<InventaryPowerUp> ().changeTo ("escudo");
 	}
 
 	public override void FinishCollectable ()
 	{
+		if (owner)
+			owner.playerController.GetComponent<InventaryPowerUp> ().changeTo ("none");
 		base.FinishCollectable ();
 		//eventsOfSphereForce -= CheckCollision;
 	}
