@@ -4,6 +4,7 @@ using System.Collections;
 public class RuneSpot : MonoBehaviour {
 	public Collectable[] collectables;
 	public Transform runeHintPrefab;
+	public GameObject particles;
 	public float timeToSpawnHint = 5;
 	public float hintLifetime = 2;
 	public float timeToCooldown = 5;
@@ -58,7 +59,7 @@ public class RuneSpot : MonoBehaviour {
 	{
 
 		m_acumTime += Time.deltaTime;
-
+		particles.SetActive (false);
 		switch (spotStatus) {
 		case status.IDLE:
 			if (m_acumTime > timeToSpawnHint) {
@@ -77,6 +78,7 @@ public class RuneSpot : MonoBehaviour {
 		case status.RUNEFULL:
 			break;
 		case status.COOLDOWN:
+			particles.SetActive (true);
 			if (m_acumTime > timeToCooldown) {
 				spotStatus = status.IDLE;
 				m_acumTime =0;

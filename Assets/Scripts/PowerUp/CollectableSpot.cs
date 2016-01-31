@@ -3,6 +3,7 @@ using System.Collections;
 
 public class CollectableSpot : MonoBehaviour
 {
+	public GameObject particles;
 	public Collectable[] collectables;
     public float timeToSpawnPowerUp = 5;
     public bool isFull
@@ -34,15 +35,16 @@ public class CollectableSpot : MonoBehaviour
 
     void Update()
     {
-        if (!isFull)
-        {
-            m_acumTime += Time.deltaTime;
-            if (m_acumTime > timeToSpawnPowerUp)
-            {
-                CreateCollectableInSpot();
-                m_acumTime = 0;
-            }
-        }
+		if (!isFull) {
+			particles.SetActive (true);
+			m_acumTime += Time.deltaTime;
+			if (m_acumTime > timeToSpawnPowerUp) {
+				CreateCollectableInSpot ();
+				m_acumTime = 0;
+			}
+		} else {
+			particles.SetActive (false);
+		}
     }
 
     void OnTriggerEnter(Collider other)
