@@ -8,7 +8,7 @@ public class PowerUpLaser : PowerUp {
 	public override void StartCollectable(CollectableOwner owner)
 	{
 		base.StartCollectable(owner);
-		lineRenderer = GetComponent<LineRenderer> ();
+		lineRenderer = GetComponent<LineRenderer> ();	
 		lineRenderer.enabled = true;
 	}
 

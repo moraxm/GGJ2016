@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour {
 			h = Input.GetAxis ("HorizontalArrows");
 			v = Input.GetAxis ("VerticalArrows");
 		}
-
+		changeDirection (h, v);
 		Vector3 finalForce = new Vector3(h * speed * Time.deltaTime, Physics.gravity.y*m_rigidBody.mass, v * speed * Time.deltaTime);
 
         /*
@@ -70,5 +70,11 @@ public class PlayerController : MonoBehaviour {
         m_oldSpeed = m_rigidBody.velocity;
     }
 
-    
+	public void changeDirection(float xAxe, float yAxe){
+		/*Vector2 basicVector = new Vector2 (1,0);
+		Vector2 realVector = new Vector2 (xAxe, yAxe);
+		float angleToRotate = Vector3.Angle (basicVector, realVector.normalized);*/
+
+	}
+		
 }
