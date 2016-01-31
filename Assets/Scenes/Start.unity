@@ -657,18 +657,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 11447500, guid: d94c2d6d003f1c346b0f4ceb48a38bc1, type: 2}
-      propertyPath: runesUi
-      value: 
-      objectReference: {fileID: 867722753}
-    - target: {fileID: 11405088, guid: d94c2d6d003f1c346b0f4ceb48a38bc1, type: 2}
-      propertyPath: scrollbar
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 11427124, guid: d94c2d6d003f1c346b0f4ceb48a38bc1, type: 2}
       propertyPath: runesUi
       value: 
       objectReference: {fileID: 867722753}
+    - target: {fileID: 11401626, guid: d94c2d6d003f1c346b0f4ceb48a38bc1, type: 2}
+      propertyPath: ui
+      value: 
+      objectReference: {fileID: 1886813827}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d94c2d6d003f1c346b0f4ceb48a38bc1, type: 2}
   m_IsPrefabParent: 0
@@ -1802,6 +1798,18 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2bdb3b54b730b4e20b90237d51f0f2bf, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1886813826 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11456382, guid: 2bdb3b54b730b4e20b90237d51f0f2bf,
+    type: 2}
+  m_PrefabInternal: {fileID: 1886813825}
+  m_Script: {fileID: 11500000, guid: 5e62ab66cc5644880bbb289b41b0817b, type: 3}
+--- !u!114 &1886813827 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11492564, guid: 2bdb3b54b730b4e20b90237d51f0f2bf,
+    type: 2}
+  m_PrefabInternal: {fileID: 1886813825}
+  m_Script: {fileID: 11500000, guid: 5e62ab66cc5644880bbb289b41b0817b, type: 3}
 --- !u!4 &1926340026 stripped
 Transform:
   m_PrefabParentObject: {fileID: 411442, guid: 4bcb932e657ce6f4a82ca764a07ab5f0, type: 2}
@@ -1845,14 +1853,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 2327184, guid: cf15e49ddfc9edc40b41ea37595cfb48, type: 2}
-      propertyPath: m_ProbeAnchor
-      value: 
-      objectReference: {fileID: 1484097607}
     - target: {fileID: 11469802, guid: cf15e49ddfc9edc40b41ea37595cfb48, type: 2}
       propertyPath: runesUi
       value: 
       objectReference: {fileID: 1484097608}
+    - target: {fileID: 2327184, guid: cf15e49ddfc9edc40b41ea37595cfb48, type: 2}
+      propertyPath: m_ProbeAnchor
+      value: 
+      objectReference: {fileID: 1484097607}
+    - target: {fileID: 11407744, guid: cf15e49ddfc9edc40b41ea37595cfb48, type: 2}
+      propertyPath: ui
+      value: 
+      objectReference: {fileID: 1886813826}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf15e49ddfc9edc40b41ea37595cfb48, type: 2}
   m_IsPrefabParent: 0

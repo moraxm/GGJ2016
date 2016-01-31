@@ -62,7 +62,7 @@ GameObject:
   - 114: {fileID: 11469802}
   - 136: {fileID: 13674556}
   - 23: {fileID: 2327184}
-  - 114: {fileID: 11407498}
+  - 114: {fileID: 11407744}
   m_Layer: 8
   m_Name: PlayerDefense
   m_TagString: PlayerDefense
@@ -333,7 +333,7 @@ MonoBehaviour:
   powerUpEmissionColor: {r: 0.034482718, g: 1, b: 0, a: 0}
   runeColor: {r: 0, g: 0, b: 1, a: 1}
   m_speed: 1
---- !u!114 &11407498
+--- !u!114 &11407744
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
