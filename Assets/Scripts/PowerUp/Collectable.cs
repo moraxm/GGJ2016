@@ -12,6 +12,11 @@ public abstract class Collectable : MonoBehaviour {
 		set { m_owner = value; }
 	}
 
+	public virtual void SetFeedback(CollectableMaterialChange feedbackManager)
+	{
+
+	}
+
 	public virtual void StartCollectable(CollectableOwner owner)
 	{
 		

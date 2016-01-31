@@ -5,7 +5,7 @@ public class PowerUpHotPotato : PowerUp {
 
 	public override void StartCollectable(CollectableOwner owner)
 	{
-		if (owner == null)
+		if (this.owner == null)
 			m_acumTime = 0; // First time someone take me
 		this.owner = owner;
 		owner.playerController.GetComponent<PlayerCollision> ().onCollisionPLayer += onCollision;
@@ -18,7 +18,9 @@ public class PowerUpHotPotato : PowerUp {
 			InventaryRune ir = owner.playerController.gameObject.GetComponent<InventaryRune> ();
 			ir.DropRune ();
 			owner.playerController.GetComponent<PlayerCollision> ().onCollisionPLayer -= onCollision;
-
+			particles.transform.parent = null;
+			particles.SetActive (true);
+			Destroy (particles, 10.0f);
 		}
 
 		base.FinishCollectable();

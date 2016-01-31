@@ -41,6 +41,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &193400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 454514}
+  - 33: {fileID: 3319094}
+  - 135: {fileID: 13509710}
+  - 23: {fileID: 2392526}
+  - 114: {fileID: 11406214}
+  m_Layer: 9
+  m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &432892
 Transform:
   m_ObjectHideFlags: 1
@@ -52,6 +71,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 452268}
+  - {fileID: 454514}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &452268
@@ -66,6 +86,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 432892}
   m_RootOrder: 0
+--- !u!4 &454514
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193400}
+  m_LocalRotation: {x: 0, y: -0.08715573, z: 0, w: 0.9961947}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 12.267251, y: 12.267246, z: 12.267244}
+  m_Children: []
+  m_Father: {fileID: 432892}
+  m_RootOrder: 1
 --- !u!23 &2314986
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -133,6 +165,39 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!23 &2392526
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193400}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 8db05f1a342dc774fbf8c3ac0eca22b8, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &3319094
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193400}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &3362240
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -172,6 +237,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11406214
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 653e1082de02ca448b214b83b805e92e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseEmissionColor: {r: 0, g: 0, b: 0, a: 0}
+  powerUpEmissionColor: {r: 0.034482718, g: 1, b: 0, a: 0}
+  m_speed: 1
 --- !u!114 &11418778
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -184,7 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionForce: 2
-  collisionEffect: {fileID: 0}
+  collisionEffect: {fileID: 100006, guid: bcf46e46336114145b09deb1db11d480, type: 2}
 --- !u!114 &11424296
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -237,6 +316,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runesUi: {fileID: 0}
+--- !u!135 &13509710
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193400}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &13674556
 CapsuleCollider:
   m_ObjectHideFlags: 1

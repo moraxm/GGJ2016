@@ -8,6 +8,12 @@ public abstract class PowerUp : Collectable
 	public GameObject particles;
 	protected float m_acumTime;
 
+	public override void SetFeedback (CollectableMaterialChange feedbackManager)
+	{
+		base.SetFeedback (feedbackManager);
+		feedbackManager.SetPowerUpFeedback (timeAlive);
+	}
+
 	public override void StartCollectable (CollectableOwner owner)
 	{
 		base.StartCollectable (owner);
