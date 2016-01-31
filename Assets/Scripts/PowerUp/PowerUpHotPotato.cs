@@ -31,13 +31,13 @@ public class PowerUpHotPotato : PowerUp {
 
 	}
 
-	public void onCollision(Collision coll){
+	public void onCollision(Collider coll){
 		if (coll.gameObject.layer != LayerMask.NameToLayer ("Player"))
 			return;
 
 		Debug.Log ("OnCollision");
 		owner.playerController.GetComponentInChildren<PlayerCollision> ().onCollisionPLayer -= onCollision;
-		ChangeOwnerEndOfFrame (coll.collider.transform.parent.GetComponentInChildren<CollectableOwner> ());
+		ChangeOwnerEndOfFrame (coll.transform.parent.GetComponentInChildren<CollectableOwner> ());
 	}
 
 	void ChangeOwnerEndOfFrame(CollectableOwner newOwner)

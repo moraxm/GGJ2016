@@ -299,6 +299,7 @@ GameObject:
   - 23: {fileID: 2352080}
   - 136: {fileID: 13652612}
   - 114: {fileID: 11427124}
+  - 114: {fileID: 11401626}
   m_Layer: 8
   m_Name: PlayerAttack
   m_TagString: Player
@@ -1201,6 +1202,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &11401626
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ff0b4925d3cb4e5a87befdf4a49ea61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ui: {fileID: 0}
 --- !u!114 &11405088
 MonoBehaviour:
   m_ObjectHideFlags: 1
