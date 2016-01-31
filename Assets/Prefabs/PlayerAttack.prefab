@@ -119,6 +119,7 @@ GameObject:
   - 114: {fileID: 11446578}
   - 23: {fileID: 2352080}
   - 136: {fileID: 13652612}
+  - 114: {fileID: 11427124}
   m_Layer: 8
   m_Name: PlayerAttack
   m_TagString: Player
@@ -510,6 +511,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a273c78d4dc43d249950a3ffaf3f4b2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11427124
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91b4b028a08fd3a4badc6b13a9771cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runesUi: {fileID: 0}
 --- !u!114 &11446578
 MonoBehaviour:
   m_ObjectHideFlags: 1

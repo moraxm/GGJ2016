@@ -12,7 +12,7 @@ GameObject:
   - 23: {fileID: 2398246}
   - 135: {fileID: 13512364}
   - 114: {fileID: 11456686}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PowerUpSpot
   m_TagString: PowerUpSpot
   m_Icon: {fileID: 0}
@@ -77,11 +77,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectables:
   - {fileID: 11467778, guid: c790a2d3cdac5824eabf736b0fa4c501, type: 2}
-  powerUpHintPrefab: {fileID: 427488, guid: fba5faefd50148041b57b3145355f8eb, type: 2}
-  timeToSpawnHint: 1
-  hintLifetime: 3
-  powerupLifetime: 10
-  timeToCooldown: 2
+  timeToSpawnPowerUp: 5
 --- !u!135 &13512364
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -100,7 +96,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 174370}
