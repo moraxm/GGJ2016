@@ -71,10 +71,11 @@ public class PlayerController : MonoBehaviour {
     }
 
 	public void changeDirection(float xAxe, float yAxe){
-		Vector2 basicVector = new Vector2 (1,0, 0);
-		Vector2 realVector = new Vector2 (xAxe, yAxe);
-		float angleToRotate = Vector2.Angle (basicVector, realVector.normalized);
-		this.GetComponent<Transform>().Rotate
+		//Vector2 basicVector = new Vector2 (1,0, 0);
+		//Vector2 realVector = new Vector2 (xAxe, yAxe);
+		//float angleToRotate = Vector2.Angle (basicVector, realVector.normalized);
+		Vector3 vector3 = new Vector3 (xAxe, 0, yAxe);
+		this.GetComponent<Transform> ().Rotate (vector3);
 	}
 		
 }
