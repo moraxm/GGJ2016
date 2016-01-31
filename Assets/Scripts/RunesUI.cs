@@ -42,7 +42,6 @@ public class RunesUI : MonoBehaviour {
 					audio.Stop ();
 					Destroy (audio);
 				}
-
 				UnityEngine.SceneManagement.SceneManager.LoadScene (sceneToLoad);
 			}
 			nextRune = false;

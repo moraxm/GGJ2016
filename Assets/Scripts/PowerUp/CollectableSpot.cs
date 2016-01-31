@@ -51,8 +51,12 @@ public class CollectableSpot : MonoBehaviour
     {
         // If this spot is empty, we decrease the runes collected.
 		if (!isFull && (other.gameObject.layer == LayerMask.NameToLayer("Force"))){
-			
-			other.gameObject.transform.parent.GetComponentInChildren<InventaryRune> ().DropRune();
+
+			InventaryRune ir = other.gameObject.transform.parent.GetComponentInChildren<InventaryRune> ();
+
+			if (ir) {
+				ir.DropRune ();
+			}
 		}
 
         // Check for PowerUpOwner component 
