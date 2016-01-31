@@ -10,7 +10,14 @@ public class Rune : Collectable
 		if (ir) {
 			ir.CollectRune ();
 		}
+		SetFeedback (owner.feedbackManager);
 		FinishCollectable ();
+	}
+
+	public override void SetFeedback (CollectableMaterialChange feedbackManager)
+	{
+		base.SetFeedback (feedbackManager);
+		feedbackManager.SetRuneFeedback ();
 	}
 
 	public override void FinishCollectable ()

@@ -5,11 +5,13 @@ public class CollectableMaterialChange : MonoBehaviour {
 
 	public Color baseEmissionColor;
 	public Color powerUpEmissionColor;
+	public Color runeColor = Color.blue;
 
 	Renderer m_renderer;
 	Material m_material;
 	public float m_speed;
 	Coroutine m_feedbackcoroutine;
+	Coroutine m_runeFeedbackCoroutine;
 	float m_acumTime;
 	// Use this for initialization
 	void Start () {
@@ -33,6 +35,21 @@ public class CollectableMaterialChange : MonoBehaviour {
 		Color finalColor = Color.Lerp (baseEmissionColor, powerUpEmissionColor,emission);
 		Debug.Log (finalColor);
 		m_material.SetColor ("_EmissionColor", finalColor);*/
+	}
+
+	public void SetRuneFeedback()
+	{
+		if (m_runeFeedbackCoroutine != null)
+			StopCoroutine (m_runeFeedbackCoroutine);
+		m_runeFeedbackCoroutine = StartCoroutine (RuneFeedbackCoroutine ());
+
+	}
+
+	IEnumerator RuneFeedbackCoroutine()
+	{
+		m_material.SetColor ("_EmissionColor", runeColor);
+		yield return new WaitForSeconds (1);
+		m_material.SetColor ("_EmissionColor", baseEmissionColor);
 	}
 
 	public void SetPowerUpFeedback(float time)
