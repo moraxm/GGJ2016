@@ -4,7 +4,7 @@ using System.Collections;
 public class CollectableOwner : MonoBehaviour {
 
 	Collectable m_currentCollectable;
-
+	CollectableMaterialChange m_feedback;
     PlayerController m_playerController;
 	public  PlayerController playerController
     {
@@ -29,6 +29,7 @@ public class CollectableOwner : MonoBehaviour {
 		// Set the player as the parent of the power up 
 		m_currentCollectable.transform.parent = transform;
         m_currentCollectable.StartCollectable(this);
+		m_currentCollectable.SetFeedback (m_feedback);
     }
 
 
@@ -36,6 +37,7 @@ public class CollectableOwner : MonoBehaviour {
 	void Start () {
         m_currentCollectable = null;
         m_playerController = GetComponent<PlayerController>();
+		m_feedback = GetComponentInChildren<CollectableMaterialChange> ();
 	}
 	
 	// Update is called once per frame
