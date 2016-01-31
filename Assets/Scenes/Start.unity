@@ -907,12 +907,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
---- !u!114 &867722753 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11466662, guid: 2bdb3b54b730b4e20b90237d51f0f2bf,
-    type: 2}
-  m_PrefabInternal: {fileID: 76859793}
-  m_Script: {fileID: 11500000, guid: 2a4b77792f51141158c240a3e3c480d3, type: 3}
 --- !u!1 &894562244
 GameObject:
   m_ObjectHideFlags: 0
@@ -2548,23 +2542,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 11447500, guid: d94c2d6d003f1c346b0f4ceb48a38bc1, type: 2}
-      propertyPath: runesUi
-      value: 
-      objectReference: {fileID: 867722753}
-    - target: {fileID: 11405088, guid: d94c2d6d003f1c346b0f4ceb48a38bc1, type: 2}
-      propertyPath: scrollbar
-      value: 
-      objectReference: {fileID: 1888783776}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5494086, guid: d94c2d6d003f1c346b0f4ceb48a38bc1, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d94c2d6d003f1c346b0f4ceb48a38bc1, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &971530831 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11469214, guid: 2bdb3b54b730b4e20b90237d51f0f2bf,
-    type: 2}
-  m_PrefabInternal: {fileID: 76859793}
-  m_Script: {fileID: 11500000, guid: 2a4b77792f51141158c240a3e3c480d3, type: 3}
 --- !u!1 &1127778376
 GameObject:
   m_ObjectHideFlags: 0
@@ -7473,12 +7454,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 06dac74182cfc954d91689d9f580c298, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1888783776 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11453086, guid: 2bdb3b54b730b4e20b90237d51f0f2bf,
-    type: 2}
-  m_PrefabInternal: {fileID: 76859793}
-  m_Script: {fileID: -2061169968, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &1890864845
 GameObject:
   m_ObjectHideFlags: 0
@@ -7710,11 +7685,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 11469802, guid: cf15e49ddfc9edc40b41ea37595cfb48, type: 2}
-      propertyPath: runesUi
-      value: 
-      objectReference: {fileID: 971530831}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5497946, guid: cf15e49ddfc9edc40b41ea37595cfb48, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: cf15e49ddfc9edc40b41ea37595cfb48, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &2119803420

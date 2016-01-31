@@ -80,6 +80,7 @@ GameObject:
   - 135: {fileID: 13558270}
   - 23: {fileID: 2397826}
   - 114: {fileID: 11453060}
+  - 114: {fileID: 11407204}
   m_Layer: 9
   m_Name: Sphere
   m_TagString: Untagged
@@ -116,7 +117,6 @@ GameObject:
   - 114: {fileID: 11405088}
   - 114: {fileID: 11422394}
   - 114: {fileID: 11446578}
-  - 114: {fileID: 11447500}
   - 23: {fileID: 2352080}
   - 136: {fileID: 13652612}
   m_Layer: 8
@@ -486,6 +486,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 200
   scrollbar: {fileID: 0}
+--- !u!114 &11407204
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 170698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f531f8afd364eb4d82133ead21fb40e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionForce: 2
+  collisionEffect: {fileID: 100006, guid: bcf46e46336114145b09deb1db11d480, type: 2}
 --- !u!114 &11422394
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -510,18 +523,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionForce: 2
   collisionEffect: {fileID: 100006, guid: bcf46e46336114145b09deb1db11d480, type: 2}
---- !u!114 &11447500
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 194118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91b4b028a08fd3a4badc6b13a9771cb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  runesUi: {fileID: 0}
 --- !u!114 &11453060
 MonoBehaviour:
   m_ObjectHideFlags: 1
