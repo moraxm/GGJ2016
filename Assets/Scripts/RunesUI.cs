@@ -38,8 +38,10 @@ public class RunesUI : MonoBehaviour {
 			}
 			if (runesFilled == maxRunes) {
 				AudioSource audio = FindObjectOfType<AudioSource> ();
-				audio.Stop ();
-				Destroy (audio);
+				if (audio) {
+					audio.Stop ();
+					Destroy (audio);
+				}
 				UnityEngine.SceneManagement.SceneManager.LoadScene (sceneToLoad);
 			}
 			nextRune = false;
