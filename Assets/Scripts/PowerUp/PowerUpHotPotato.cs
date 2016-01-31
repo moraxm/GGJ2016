@@ -8,7 +8,7 @@ public class PowerUpHotPotato : PowerUp {
 		if (this.owner == null)
 			m_acumTime = 0; // First time someone take me
 		this.owner = owner;
-		owner.playerController.transform.parent.GetComponentInChildren<PlayerCollision> ().onCollisionPLayer += onCollision;
+		owner.playerController.GetComponentInChildren<PlayerCollision> ().onCollisionPLayer += onCollision;
 		owner.playerController.GetComponent<InventaryPowerUp> ().changeTo ("bomba");
 
 	}
