@@ -5,6 +5,10 @@ public class CollectableOwner : MonoBehaviour {
 
 	Collectable m_currentCollectable;
 	CollectableMaterialChange m_feedback;
+	public CollectableMaterialChange feedbackManager
+	{
+		get { return m_feedback; }
+	}
     PlayerController m_playerController;
 	public  PlayerController playerController
     {

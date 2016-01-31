@@ -296,7 +296,6 @@ GameObject:
   - 114: {fileID: 11457566}
   - 114: {fileID: 11405088}
   - 114: {fileID: 11422394}
-  - 114: {fileID: 11446578}
   - 23: {fileID: 2352080}
   - 136: {fileID: 13652612}
   - 114: {fileID: 11427124}
@@ -554,9 +553,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 122162}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+  m_LocalPosition: {x: 0.1, y: -7.3, z: 13.1}
+  m_LocalScale: {x: 3.7234483, y: 3.7234468, z: 3.7234468}
   m_Children:
   - {fileID: 420438}
   - {fileID: 449198}
@@ -1229,6 +1228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionForce: 2
   collisionEffect: {fileID: 100006, guid: bcf46e46336114145b09deb1db11d480, type: 2}
+  m_rigidBody: {fileID: 5470548}
 --- !u!114 &11422394
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1252,6 +1252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runesUi: {fileID: 0}
+<<<<<<< HEAD
 --- !u!114 &11440308
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1277,6 +1278,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionForce: 2
   collisionEffect: {fileID: 100006, guid: bcf46e46336114145b09deb1db11d480, type: 2}
+=======
+>>>>>>> 73e0ef2d5855763da598d5be538a1e0115906eac
 --- !u!114 &11453060
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1290,6 +1293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   powerUpEmissionColor: {r: 0.86764705, g: 0.044658296, b: 0.044658296, a: 0}
+  runeColor: {r: 0, g: 0, b: 1, a: 1}
   m_speed: 1
 --- !u!114 &11457566
 MonoBehaviour:

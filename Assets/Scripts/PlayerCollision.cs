@@ -9,7 +9,7 @@ public class PlayerCollision : MonoBehaviour
 	public event onCollisionPlayerDelegate onCollisionPLayer;
 	public GameObject collisionEffect;
 
-    Rigidbody m_rigidBody;
+    public Rigidbody m_rigidBody;
 	Vector3 m_lastSpeed;
 	public Vector3 lastSpeed 
 	{
@@ -18,7 +18,7 @@ public class PlayerCollision : MonoBehaviour
 
     public void Start()
     {
-        m_rigidBody = GetComponentInParent<Rigidbody>();
+        //m_rigidBody = GetComponentInParent<Rigidbody>();
 
     }
 
@@ -28,14 +28,13 @@ public class PlayerCollision : MonoBehaviour
 		if (onCollisionPLayer != null)
 			onCollisionPLayer (collision);
 		
-		if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Player") 
-			|| collision.collider.gameObject.layer == LayerMask.NameToLayer("Force"))
+		if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Force"))
         {
 			
 			GameObject go = (GameObject)Instantiate(collisionEffect, transform.position, Quaternion.identity);
 			Destroy(go, 3.0f);
 
-			PlayerCollision rb = collision.collider.GetComponentInChildren<PlayerCollision>();
+			PlayerCollision rb = collision.collider.GetComponent<PlayerCollision>();
             if (rb)
             {
                 //float explosionForce = collisionForce * m_rigidBody.velocity.magnitude;
@@ -44,7 +43,7 @@ public class PlayerCollision : MonoBehaviour
 				if (rb.lastSpeed.magnitude < lastSpeed.magnitude) {
 					
 					// The velocity of the other player is lower than my velocity so drop rune
-					InventaryRune inventary = collision.collider.GetComponentInChildren<InventaryRune> ();
+					InventaryRune inventary = collision.collider.transform.parent.GetComponentInChildren<InventaryRune> ();
 					if (inventary != null) {
 						inventary.DropRune ();
 					} 

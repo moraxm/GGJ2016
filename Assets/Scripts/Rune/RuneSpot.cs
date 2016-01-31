@@ -109,11 +109,11 @@ public class RuneSpot : MonoBehaviour {
 		// If this spot is empty, we decrease the runes collected.
 		if (!isFull && (other.gameObject.layer == LayerMask.NameToLayer("Force"))){
 			//Debug.Log ("OnTriggerEnter.other: " + other);
-			other.gameObject.GetComponent<InventaryRune> ().DropRune();
+			other.gameObject.transform.parent.GetComponentInChildren<InventaryRune> ().DropRune();
 		}
 
 		// Check for PowerUpOwner component 
-		CollectableOwner owner = other.GetComponent<CollectableOwner>();
+		CollectableOwner owner = other.transform.parent.GetComponentInChildren<CollectableOwner>();
 		if (owner == null || m_currentCollectable == null) return;
 
 		//owner.SetCollectable(m_currentCollectable);

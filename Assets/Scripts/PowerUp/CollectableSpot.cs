@@ -53,7 +53,7 @@ public class CollectableSpot : MonoBehaviour
 		}
 
         // Check for PowerUpOwner component 
-		CollectableOwner owner = other.GetComponent<CollectableOwner>();
+		CollectableOwner owner = other.transform.parent.GetComponentInChildren<CollectableOwner>();
 		if (owner == null || m_currentCollectable == null) return;
 
 		owner.SetCollectable(m_currentCollectable);
